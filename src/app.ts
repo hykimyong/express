@@ -4,8 +4,9 @@ const app: express.Express = express();
 
 const port: number = 8000;
 
-app.get("/", (req, res) => {
-  res.send("Hello World!");
+app.get("/", (req: express.Request, res: express.Response) => {
+  console.log(req);
+  res.send({ name: "kim nak yong", age: 99, friends: ["ss", "ys", "ye"] });
 });
 
 app.listen(port, () => {
